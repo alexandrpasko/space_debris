@@ -1,24 +1,26 @@
-# ignore everything in the root except the "wp-content" directory.
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
 !public/wp-content/
-public/*
+!README.md
+!screenshot.jpg
 
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
 public/wp-content/*
-!public/wp-content/mu-plugins/
 !public/wp-content/plugins/
 !public/wp-content/themes/
 
-# ignore these plugins
-public/wp-content/plugins/hello.php
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+public/wp-content/plugins/*
+# !wp-content/plugins/my-single-file-plugin.php
+# !wp-content/plugins/my-directory-plugin/
 
-# ignore specific themes
-public/wp-content/themes/twenty*/
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+public/wp-content/themes/*
+!public/wp-content/themes/spacedebris/
 
-# ignore node dependency directories
-public/node_modules/
-
-# ignore log files and databases
-*.log
+# ignore database
 *.sql
-*.sqlite
